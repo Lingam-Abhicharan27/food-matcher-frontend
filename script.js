@@ -53,10 +53,14 @@ async function login() {
             password: document.getElementById('password').value
         })
     });
+
     const data = await res.json();
     document.getElementById('msg').innerText = data.message;
+
     if (data.status === 'success') {
-        alert('Login successful! Now you can donate.');
-        window.location.href = 'donate.html';
+        // Save login state
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'index.html';
     }
 }
+
