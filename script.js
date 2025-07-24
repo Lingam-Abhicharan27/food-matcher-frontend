@@ -58,9 +58,7 @@ async function login() {
     document.getElementById('msg').innerText = data.message;
 
     if (data.status === 'success') {
-        // Save login state
         localStorage.setItem('loggedIn', 'true');
         window.location.href = 'index.html';
     }
 }
-
