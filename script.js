@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000';
+const API = 'https://your-backend-url.onrender.com';
 
 async function register() {
     const res = await fetch(`${API}/register`, {
